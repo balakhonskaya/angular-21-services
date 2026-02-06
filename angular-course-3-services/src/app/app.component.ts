@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
       .set("page", "1")
       .set("pageSize", "5");
 
-    this.http.get('api/course', { params } )
+    this.http.get('api/courses', { params } )
       .subscribe(
         courses => this.courses = courses
       );
