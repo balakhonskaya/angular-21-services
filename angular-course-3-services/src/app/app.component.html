@@ -6,8 +6,7 @@
   </div>
 
   <div>
-
-    <div class="courses">
+    <div class="courses" *ngIf="courses$ | async as courses">
 
       @for (course of courses; track course) {
         <course-card
@@ -17,8 +16,6 @@
     }
 
   </div>
-
-
 </div>
 
 
