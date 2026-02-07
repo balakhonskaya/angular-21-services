@@ -10,8 +10,9 @@
 
       @for (course of courses; track course) {
         <course-card
-          [course]="course">
-        <course-image [src]="course.iconUrl"></course-image>
+          [course]="course"
+          (courseChanged)="save($event)">
+          <course-image [src]="course.iconUrl"></course-image>
       </course-card>
     }
 
