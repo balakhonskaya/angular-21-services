@@ -1,19 +1,11 @@
 import {
-    AfterContentInit,
-    AfterViewInit,
     Component,
-    ContentChildren,
-    ElementRef,
     EventEmitter,
     Input,
     OnInit,
-    Output,
-    QueryList,
-    ViewEncapsulation
+    Output
 } from '@angular/core';
 import {Course} from '../model/course';
-import {CourseImageComponent} from '../course-image/course-image.component';
-import { CoursesService } from '../services/courses.service';
 
 @Component({
     selector: 'course-card',

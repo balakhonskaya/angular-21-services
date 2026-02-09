@@ -4,14 +4,13 @@ import {Course} from './model/course';
 import {CourseCardComponent} from './course-card/course-card.component';
 import {HighlightedDirective} from './directives/highlighted.directive';
 import {Observable} from 'rxjs';
-import { HttpClient, HttpParams } from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe, CommonModule, NgForOf, NgIf } from '@angular/common';
 import { CourseImageComponent } from './course-image/course-image.component';
 
 @Component({
     selector: 'app-root',
-    imports: [AsyncPipe, NgIf, CourseCardComponent, CourseImageComponent],
+    imports: [AsyncPipe, NgIf, NgForOf, CourseCardComponent, CourseImageComponent, CommonModule, HighlightedDirective],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true
