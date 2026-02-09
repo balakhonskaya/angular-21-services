@@ -19,7 +19,7 @@ import { CoursesService } from '../services/courses.service';
     selector: 'course-card',
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css'],
-    standalone: false
+    standalone: true
 })
 export class CourseCardComponent implements OnInit {
 

@@ -6,12 +6,15 @@ import {HighlightedDirective} from './directives/highlighted.directive';
 import {Observable} from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { CourseImageComponent } from './course-image/course-image.component';
 
 @Component({
     selector: 'app-root',
+    imports: [AsyncPipe, NgIf, CourseCardComponent, CourseImageComponent],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    standalone: false
+    standalone: true
 })
 export class AppComponent implements OnInit {
 
