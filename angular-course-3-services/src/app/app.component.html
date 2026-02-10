@@ -4,8 +4,7 @@
     src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
   </div>
-
-  <div>
+  @defer {
     <div class="courses" *ngIf="courses$ | async as courses">
 
       @for (course of courses; track course) {
@@ -17,7 +16,13 @@
     }
 
   </div>
-</div>
+  }
+  @placeholder (minimum 3s){
+    <div>
+     <h2>This is a placeholder for the courses section</h2>
+    </div>
+
+  }
 
 
 
